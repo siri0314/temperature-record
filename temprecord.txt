@@ -1,0 +1,152 @@
+package program53;
+import java.util.Scanner;
+public class Program53 {
+    public static void main(String[] args) {
+        int max,min,row, col, i, s = 0,j;
+       int arr[][] = new int[10][15];
+       Scanner scan = new Scanner(System.in);
+	   
+       // enter row and column for array.
+       System.out.print("Enter row for the array (max 10) : ");
+       row = scan.nextInt();
+       System.out.print("Enter column for the array (max 10) : ");
+       col = scan.nextInt();
+	   
+       // enter array elements.
+       System.out.println("Enter " +(row*col)+ " Array Elements : ");
+       for(i=0; i<row; i++)
+       {
+           for(j=0; j<col; j++)
+           {
+               arr[i][j] = scan.nextInt();
+           }
+       }
+	   
+       // the 2D array is here.
+       System.out.print("The Array is :\n");
+       for(i=0; i<row; i++)
+       {
+           for(j=0; j<col; j++)
+           {
+               System.out.print(arr[i][j]+ "  ");
+           }
+           System.out.println();
+       }
+        max=arr[0][3];
+       
+               for(i=0,j=3;i<row ; i++)
+                 { 
+                     if(arr[i][j]>max) 
+                     {
+                         max=arr[i][j];
+                         s=i;
+             }
+}
+               System.out.println("the maximum temperature value in april month is"+max+"in the "+(s+1)+"state");
+        max=arr[0][4];
+               for(i=0,j=4;i<row ; i++)
+                 { 
+                     if(arr[i][j]>max) 
+                     {
+                         max=arr[i][j];
+                         s=i;
+                       } 
+                 }
+     System.out.println("the maximum temperature value in may month is"+max+"in the "+(s+1)+"state");
+     min=arr[0][0]; 
+               for(i=0,j=0;i<row ; i++)
+                 { 
+                     if(arr[i][j]<min) 
+                     {
+                         min=arr[i][j];
+                         s=i;
+                      }
+                             }
+    System.out.println("the minimum temperature value in january month is"+min+"in the "+(s+1)+"state"); 
+      min=arr[0][11];
+   for(i=0,j=11;i<row ; i++)       {
+   if(arr[i][j]<min) 
+                     {
+                         min=arr[i][j];
+                         s=i;       
+} 
+                 } 
+     System.out.println("the minimum temperature value in december month is"+min+"in the "+(s+1)+"state");
+    } 
+}
+Output:
+run:
+Enter row for the array (max 10) : 5
+Enter column for the array (max 10) : 12
+Enter 60 Array Elements : 
+12
+23
+34
+45
+56
+67
+78
+89
+90
+98
+87
+76
+65
+54
+43
+32
+21
+13
+2
+24
+35
+46
+57
+68
+79
+80
+97
+75
+53
+31
+21
+43
+65
+87
+9811
+22
+33
+44
+55
+66
+77
+88
+99
+00
+76
+54
+342
+23
+5
+55
+94
+85
+76
+19
+82
+74
+75
+64
+65
+23
+The Array is :
+12  23  34  45  56  67  78  89  90  98  87  76  
+65  54  43  32  21  13  2  24  35  46  57  68  
+79  80  97  75  53  31  21  43  65  87  9811  22  
+33  44  55  66  77  88  99  0  76  54  342  23  
+5  55  94  85  76  19  82  74  75  64  65  23  
+the maximum temperature value in april month is85in the 5state
+the maximum temperature value in may month is77in the 4state
+the minimum temperature value in january month is5in the 5state
+the minimum temperature value in december month is22in the 3state
+BUILD SUCCESSFUL (total time: 1 minute 44 seconds)
